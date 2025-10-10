@@ -1,0 +1,16 @@
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if len(nums) == 0:
+            return 0
+        res = set(nums)
+        result = list(res)
+        result.sort()
+        print (result)
+        sequence = [1] * len(result)
+        seq_no = 0
+        for i in range(1,len(result)):
+            if ((result[i] - result[i-1] - 1 ) == 0):
+                sequence[seq_no] += 1
+            else:
+                seq_no += 1
+        return max(sequence)
