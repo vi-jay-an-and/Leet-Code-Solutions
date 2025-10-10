@@ -2,8 +2,7 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         if len(nums) == 0:
             return 0
-        res = set(nums)
-        result = list(res)
+        result = list(set(nums))
         result.sort()
         print (result)
         sequence = [1] * len(result)
