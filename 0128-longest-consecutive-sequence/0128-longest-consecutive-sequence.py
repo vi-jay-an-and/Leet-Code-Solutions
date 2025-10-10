@@ -4,7 +4,6 @@ class Solution:
             return 0
         result = list(set(nums))
         result.sort()
-        print (result)
         sequence = [1] * len(result)
         seq_no = 0
         for i in range(1,len(result)):
